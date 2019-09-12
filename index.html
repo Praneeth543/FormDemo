@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>FORMS</title>
+  <link rel="stylesheet" href="cssc/styles.css">
+</head>
+
+<body>
+  <h2>DETAILS</h2>
+
+
+  <form name="myForm" action="">
+    <table border="1" style="width:50%">
+  <caption></caption>
+
+  <tr>
+    <td>First name :</td>
+    <td>    <input id="fname" type="text" name="fname" onblur="validateFname()">
+      <span id="firstspan"></span>
+    </td>
+
+  </tr>
+  <tr>
+    <td>Last name:</td>
+    <td>   <input id="lname" type="text" name="lname" onblur="validateLname()" ><span id="lastspan">
+</span>
+    </td>
+
+  </tr>
+
+  <tr>
+    <td>   Mobile:
+</td>
+    <td>   <input id="tel"type="tel" name="phone" onblur="validateMobile()" >
+      <span id="telspan"></span>
+</td>
+  </tr>
+  <tr>
+    <td>  E-mail:</td>
+    <td>   <input id="email" type="email" name="email" onblur="validateEmail()" >
+     <span id ="mail"></span>
+   </td>
+  </tr>
+
+  <tr>
+    <td>   Date of Birth:
+</td>
+    <td>     <input id="date" type="date" name="bday" onblur="validateDob()">
+
+      <span id="dob"></span>
+</td>
+  </tr>
+
+  <tr>
+    <td>   country :
+</td>
+    <td>  <select id="country" name="country" onblur="validateCountry()" >
+    <option value="India">INDIA</option>
+    <option value="Australia">AUSTRALIA</option>
+    <option value="USA">USA</option>
+  </select>
+</td>
+  </tr>
+  <tr>
+    <td>  User password:
+  </td>
+    <td>  <input id="pass"type="password" name="psw" onblur="validatePass()"><br>
+      <span id = "passpan"></span>
+  </td>
+  </tr>
+
+  <tr>
+    <td>  Confirm password:
+  </td>
+    <td>  <input id="cpass"type="password" name="cpsw" onblur="validateCpass()" ><br>
+      <span id = "cpasspan"></span>
+  </td>
+  </tr>
+
+  <tr>
+    <td>  Gender:
+  </td>
+    <td>    <input  type="radio" name="gender" value="male" onblur="validateGender()" > Male<br>
+      <input type="radio" name="gender" value="female"  onblur="validateGender()" > Female<br>
+      <input type="radio" name="gender" value="other" onblur="validateGender()"> Other
+  </td>
+  </tr>
+  <tr>
+    <td>  vehicle type :
+  </td>
+    <td id ="checktd" >
+      <input id="check" type="checkbox" name="vehicle1" value="Car" onblur="validateCheck()"> car<br>
+      <input id="check" type="checkbox" name="vehicle1" value="Bike"  > bike<br>
+  </td>
+  </tr>
+  <tr>
+    <td>    Select your favorite color :
+  </td>
+    <td>  <input type="color" name="favcolor">
+  </td>
+  </tr>
+
+
+  <tr>
+    <td>    Decribe Yourslef
+  </td>
+    <td>  <textarea id="text" rows="4" col="4" onblur="validateDesc()">
+</textarea>
+  </td>
+  </tr>
+
+
+
+  <tr>
+    <td>      Upload a file :
+  </td>
+     <td >   <input type="file" id="file" onblur="fileValidation()">
+
+<!-- Image preview -->
+
+      <span id="imagePreview"></span>
+
+  </td>
+  </tr>
+
+</table>
+
+
+  <br><br>
+
+
+    <button type="button" onclick="validateForm()">Submit</button>
+    <input class="reset" type="reset">
+  </form>
+
+
+
+  <p id="output">
+
+
+  </p>
+
+  <div id="h">
+
+
+  </div>
+
+<table border="1">
+  <thead>
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>E-mail</th>
+      <th>Mobile</th>
+      <th>DOB</th>
+      <th>Country</th>
+      <th>Gender</th>
+      <th>Vehicle</th>
+      <th>description</th>
+      <th>File</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td id="Fname">
+      </td>
+      <td id="Lname">
+      </td>
+      <td id="Mail">
+      </td>
+      <td id="Tel">
+      </td>
+      <td id ="DOB"></td>
+      <td id="Country">
+      </td>
+      <td id="Gender"></td>
+      <td id="Vehicle" ></td>
+      <td id="description" ></td>
+      <td id="Imagefile" ></td>
+
+
+    </tr>
+    <script src="index.js" charset="utf-8"></script>
+
+</body>
+
+</html>
